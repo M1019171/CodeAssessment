@@ -1,0 +1,42 @@
+﻿@model Patient.Demo.Models.PatientDetails
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @Html.BeginForm("", "", FormMethod.Post){
+
+    <div class="row">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Forename)
+            @Html.TextBoxFor(m => m.Forename, new { @class = "form-control" })
+        </div>
+
+        <div id="result">
+
+        </div>
+
+        <input type="button" id="submit" class="btn btn-default" value="Submit" />
+        }
+    </div>
+
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submit").click(function () {
+                var url = "/Home/Save";
+                var data = { "foreName": "TEst" };
+                $.post(url, data).done(function (result) { alert("done"); }).fail(function () {
+                    alert("error");
+                })
+
+                $.get(url, function (res) {
+                    $("#div").html(res);
+                })
+            })
+        })
+
+    </script>
+} 
