@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patient.Demo.BusinessLayer
+namespace Patient.Demo.Tests
 {
     public class Class1
     {

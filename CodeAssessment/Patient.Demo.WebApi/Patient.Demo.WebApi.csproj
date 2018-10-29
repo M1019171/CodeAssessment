@@ -45,6 +45,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SimpleInjector, Version=4.3.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.1.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.1.5\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.WebApi, Version=3.1.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.1.5\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -109,6 +118,10 @@
     <ProjectReference Include="..\Patient.Demo.BusinessLayer\Patient.Demo.BusinessLayer.csproj">
       <Project>{ee700b0d-e698-4dd1-9eb1-6d54d2ad2b07}</Project>
       <Name>Patient.Demo.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patient.Demo.DataLayer\Patient.Demo.DataLayer.csproj">
+      <Project>{05adac83-0830-476f-9e83-593def392957}</Project>
+      <Name>Patient.Demo.DataLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Patient.Demo.Models\Patient.Demo.Models.csproj">
       <Project>{10d23689-9400-42f3-902a-44d5fa5ed5a8}</Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Patient.Demo.BusinessLayer;
+using Patient.Demo.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,16 @@ namespace Patient.Demo.WebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            UnityConfig.RegisterComponents();
+
+            //var container = new Container();
+            //container.Register<IPatientDemoBusinessLayer, PatientDemoBusinessLayer>();
+            //container.Register<IPatientDemoDataAccessLayer, PatientDemoDataAccessLayer>();
+            //container.Verify();
+            
+            //DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
+            
         }
     }
 }
